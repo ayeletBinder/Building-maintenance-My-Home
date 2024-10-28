@@ -20,22 +20,13 @@ public class DateBuildingWorker {
     private Time startTime;
     private Time endTime;
 
+    public DateBuildingWorker() {}
+
     public DateBuildingWorker(int id) {
         this.id = id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setIdWorker(int idWorker) {
-        this.idWorker = idWorker;
-    }
-
-    public void setIdBuilding(int idBuilding) {
-        this.idBuilding = idBuilding;
-    }
-
+    //set
     public void setDate(Date date) {
         this.date = date;
     }
@@ -47,6 +38,8 @@ public class DateBuildingWorker {
     public void setEndTime(Time endTime) {
         this.endTime = endTime;
     }
+
+    //get
 
     public int getId() {
         return id;
