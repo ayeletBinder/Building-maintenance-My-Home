@@ -28,9 +28,6 @@ public class BuildingItem {
         return idItem;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setIdBuilding(int idBuilding) {
         this.idBuilding = idBuilding;

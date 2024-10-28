@@ -11,9 +11,9 @@ public interface Buildingitemreposetory extends JpaRepository<BuildingItem,Integ
     default List<BuildingItem> GetAllBuildingItems(){
         return  this.findAll();
     }
+
 //    getById
     default  BuildingItem GetBuildingItemById(int id){
-        System.out.println( this.findAll().stream().filter(x->x.getId()==id).collect(Collectors.toList()).get(0) );
         return this.findById(id).orElse(null);    }
 //    add
     default void AddBuildingItem(BuildingItem buildingItem){

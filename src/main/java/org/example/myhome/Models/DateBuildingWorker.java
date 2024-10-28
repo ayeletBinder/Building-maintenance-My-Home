@@ -1,12 +1,10 @@
 package org.example.myhome.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -14,26 +12,36 @@ public class DateBuildingWorker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int idWorker;
-    private int idBuilding;
+    @ManyToMany
+    @JoinColumn(name = "person_id", nullable = false)
+    private List<Person> people;
+    @ManyToMany
+    @JoinColumn(name = "building_id", nullable = false)
+    private List<Bilding> Buildings;
     private Date date;
     private Time startTime;
     private Time endTime;
 
-    public DateBuildingWorker(int id) {
-        this.id = id;
+    public void setIdPeople(List<Person> people) {
+        this.people = people;
+    }
+
+    public void setBuildings(List<Bilding> Buildings) {
+        this.Buildings = Buildings;
+    }
+
+    public List<Bilding> getBuildings() {
+        return Buildings;
+    }
+
+    public List<Person> getIdPeople() {
+        return people;
+    }
+    public DateBuildingWorker() {
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public void setIdWorker(int idWorker) {
-        this.idWorker = idWorker;
-    }
-
-    public void setIdBuilding(int idBuilding) {
-        this.idBuilding = idBuilding;
     }
 
     public void setDate(Date date) {
@@ -52,13 +60,7 @@ public class DateBuildingWorker {
         return id;
     }
 
-    public int getIdWorker() {
-        return idWorker;
-    }
 
-    public int getIdBuilding() {
-        return idBuilding;
-    }
 
     public Date getDate() {
         return date;
