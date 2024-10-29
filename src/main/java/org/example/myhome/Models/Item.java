@@ -1,9 +1,9 @@
 package org.example.myhome.Models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-import java.util.List;
-@Entity
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,8 +42,6 @@ public class Item {
         return price;
     }
 
-
-
     public void setName(String name) {
         this.name = name;
     }
@@ -51,4 +49,6 @@ public class Item {
     public void setPrice(int price) {
         this.price = price;
     }
+
+
 }

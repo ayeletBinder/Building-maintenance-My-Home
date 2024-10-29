@@ -40,6 +40,8 @@ public class DateBuildingWorker {
     public DateBuildingWorker() {
     }
 
+
+
     public void setId(int id) {
         this.id = id;
     }
@@ -55,6 +57,8 @@ public class DateBuildingWorker {
     public void setEndTime(Time endTime) {
         this.endTime = endTime;
     }
+
+    //get
 
     public int getId() {
         return id;

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public interface Buildingitemreposetory extends JpaRepository<BuildingItem,Integer> {
+public interface Buildingreposetory extends JpaRepository<BuildingItem,Integer> {
 //    getAll
     default List<BuildingItem> GetAllBuildingItems(){
         return  this.findAll();

@@ -12,7 +12,7 @@ public class BuildingItem {
     private int id;
     private int idBuilding;
     private int idItem;
-
+    
     public BuildingItem() {
     }
 
