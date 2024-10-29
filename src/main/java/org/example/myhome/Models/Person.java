@@ -1,6 +1,6 @@
 package org.example.myhome.Models;
 
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Person {
@@ -19,9 +19,9 @@ public class Person {
     @JoinColumn(name = "building_id", referencedColumnName = "id")
     private Bilding bilding;
     
-    public person() {}
+    public Person() {}
 
-    public person( String name, String city, String address, String phone, String email, String member, String identity) {
+    public Person( String name, String city, String address, String phone, String email, String member, String identity) {
         this.name = name;
         this.city = city;
         this.address = address;

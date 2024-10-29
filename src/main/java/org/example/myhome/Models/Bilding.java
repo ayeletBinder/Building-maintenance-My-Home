@@ -1,9 +1,8 @@
 package org.example.myhome.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 
@@ -18,7 +17,6 @@ public class Bilding {
     private List<Item> items;
     @OneToOne(mappedBy = "bilding")
     private Person person;
-    
     public Bilding() {
     }
     public Bilding(String address, String city) {
