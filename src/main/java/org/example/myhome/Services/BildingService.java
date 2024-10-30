@@ -5,7 +5,9 @@ import org.example.myhome.Models.Bilding;
 import org.example.myhome.Reposetories.BildingReposetory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,4 +24,11 @@ public class BildingService  {
     public Bilding updateBilding(int id, Bilding BildingDetails) {
             return buildingRepository.UpdateBilding(id, BildingDetails);
     }
+
+    //פונקציה שמחזירה הכל
+    public List<Bilding> getAllBildings() {
+        return  buildingRepository.GetAllBildings();
+    }
 }
+
+
