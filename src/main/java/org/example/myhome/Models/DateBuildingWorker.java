@@ -21,6 +21,16 @@ public class DateBuildingWorker {
     private Date date;
     private Time startTime;
     private Time endTime;
+    private boolean shabatOrHoliday;
+
+    public boolean isShabatOrHoliday() {
+        return shabatOrHoliday;
+    }
+
+    public void setShabatOrHoliday(boolean shabatOrHoliday) {
+        this.shabatOrHoliday = shabatOrHoliday;
+    }
+
 
     public void setIdPeople(List<Person> people) {
         this.people = people;
@@ -37,6 +47,7 @@ public class DateBuildingWorker {
     public List<Person> getIdPeople() {
         return people;
     }
+
     public DateBuildingWorker() {
     }
 

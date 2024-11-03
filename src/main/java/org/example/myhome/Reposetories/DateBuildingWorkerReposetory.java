@@ -30,6 +30,7 @@ public interface DateBuildingWorkerReposetory extends JpaRepository<DateBuilding
 default DateBuildingWorker UpdateDateBuildingWorker(int id,DateBuildingWorker newDateBuildingWorker){
         return this.findById(id)
                 .map(existingItem -> {
+                    existingItem.setShabatOrHoliday(newDateBuildingWorker.isShabatOrHoliday());
                     existingItem.setBuildings(newDateBuildingWorker.getBuildings());
                     existingItem.setDate(newDateBuildingWorker.getDate());
                     existingItem.setEndTime(newDateBuildingWorker.getEndTime());
