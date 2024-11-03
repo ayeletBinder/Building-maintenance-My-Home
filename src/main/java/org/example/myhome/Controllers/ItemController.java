@@ -42,7 +42,7 @@ public class ItemController {
     }
     @PutMapping("/{id}")
     public Item updateItem(@PathVariable int id, @RequestBody Item item) {
-       return itemService.updateItem(id, item);
+        return itemService.updateItem(id, item);
     }
 }
 
@@ -57,4 +57,3 @@ public class ItemController {
 //api/Items/ {v} {id}
 //id
 //אוביקט BODY JSON
-
