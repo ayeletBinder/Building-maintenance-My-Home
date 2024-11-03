@@ -16,9 +16,8 @@ public interface DateBuildingWorkerReposetory extends JpaRepository<DateBuilding
         System.out.println( this.findAll().stream().filter(x->x.getId()==id).collect(Collectors.toList()).get(0) );
         return this.findById(id).orElse(null);    }
 //    add
-    default void AddDateBuildingWorker(DateBuildingWorker DateBuildingWorker){
-        this.save(DateBuildingWorker);
-//        return
+    default DateBuildingWorker AddDateBuildingWorker(DateBuildingWorker DateBuildingWorker){
+       return this.save(DateBuildingWorker);
     }
 //    update
 default DateBuildingWorker UpdateDateBuildingWorker(int id,DateBuildingWorker newDateBuildingWorker){

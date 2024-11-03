@@ -26,13 +26,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>9.2.0.jre11</version> <!-- גרסה עשויה להשתנות -->
+        </dependency>
         <!-- Spring Data JPA Starter -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
+            <dependency>
+                <groupId>net.sourceforge.zmanim</groupId>
+                <artifactId>zmanim</artifactId>
+                <version>2.3</version> <!-- תוודא שהגרסה מעודכנת בהתאם לצורך -->
+            </dependency>
         <!-- H2 Database (לסביבת פיתוח) -->
         <dependency>
             <groupId>com.h2database</groupId>

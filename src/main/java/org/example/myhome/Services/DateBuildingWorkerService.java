@@ -5,6 +5,7 @@ import org.example.myhome.Reposetories.DateBuildingWorkerReposetory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
 
 @Service
@@ -15,8 +16,8 @@ public class DateBuildingWorkerService  {
         this.dateBuildingWorkerReposetory = dateBuildingWorkerReposetory;
     }
     // פונקציה להוספת פריט חדש
-    public void addBuilding(DateBuildingWorker dateBuildingWorker) {
-         dateBuildingWorkerReposetory.AddDateBuildingWorker(dateBuildingWorker);
+    public DateBuildingWorker addBuilding(DateBuildingWorker dateBuildingWorker) {
+        return dateBuildingWorkerReposetory.AddDateBuildingWorker(dateBuildingWorker);
     }
 
     // פונקציה לעדכון פריט קיים לפי ID
@@ -34,3 +35,9 @@ public class DateBuildingWorkerService  {
     }
 
 }
+
+
+
+
+
+

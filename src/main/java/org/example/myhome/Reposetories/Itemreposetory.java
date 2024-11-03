@@ -2,25 +2,25 @@ package org.example.myhome.Reposetories;
 
 import org.example.myhome.Models.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 public interface Itemreposetory extends JpaRepository<Item, Integer> {
     //    getAll
-    default List<Item> GetAllItems() {
-        return this.findAll();
+    default Optional<List<Item>> GetAllItems() {
+        return Optional.of(this.findAll());
     }
 
     //    getById
-    default Item GetItemById(int id) {
-        System.out.println(this.findAll().stream().filter(x -> x.getId() == id).collect(Collectors.toList()).get(0));
-        return this.findById(id).orElse(null);
+    default Optional<Item> GetItemById(int id) {
+        return this.findById(id);
     }
 
     //    add
-    default void AddItem(Item item) {
-        this.save(item);
+    default Item AddItem(Item item) {
+       return this.save(item);
 //        return
     }
 

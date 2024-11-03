@@ -4,21 +4,21 @@ import org.example.myhome.Models.Bilding;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BildingReposetory extends JpaRepository<Bilding,Integer> {
 //    getAll
-    default List<Bilding> GetAllBildings(){
-        return  this.findAll();
+    default Optional<List<Bilding>> GetAllBildings(){
+        return Optional.of(this.findAll());
     }
 
 //    getById
-    default  Bilding GetBildingById(int id){
-        return this.findById(id).orElse(null);    }
+    default  Optional<Bilding> GetBildingById(int id){
+        return this.findById(id);    }
 //    add
     default Bilding AddBilding(Bilding Bilding){
-        this.save(Bilding);
 //        return
-        return Bilding;
+        return  this.save(Bilding);
     }
 //    update
 default Bilding UpdateBilding(int id,Bilding newBilding){

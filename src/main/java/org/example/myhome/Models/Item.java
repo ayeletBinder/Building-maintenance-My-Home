@@ -1,6 +1,7 @@
 package org.example.myhome.Models;
 
 import jakarta.persistence.*;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 

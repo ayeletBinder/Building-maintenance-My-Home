@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BildingService  {
@@ -26,10 +27,10 @@ public class BildingService  {
     public Boolean deleteBilding(int id) {
         return buildingRepository.DeleteBilding(id) ;
     }
-    public Bilding getBildingById(int id) {
+    public Optional<Bilding> getBildingById(int id) {
         return buildingRepository.GetBildingById(id);
     }
-    public List<Bilding> getAllBildings() {
+    public Optional<List<Bilding>> getAllBildings() {
         return  buildingRepository.GetAllBildings();
     }
 
