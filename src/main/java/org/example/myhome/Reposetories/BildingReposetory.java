@@ -12,9 +12,11 @@ public interface BildingReposetory extends JpaRepository<Bilding,Integer> {
         return Optional.of(this.findAll());
     }
 
-//    getById
-    default  Optional<Bilding> GetBildingById(int id){
-        return this.findById(id);    }
+    //    getById
+    default Optional<Bilding> GetBildingById(int id) {
+        return this.findById(id);
+    }
+
 //    add
     default Bilding AddBilding(Bilding Bilding){
 //        return
